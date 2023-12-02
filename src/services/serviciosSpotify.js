@@ -1,6 +1,5 @@
 export async function obtenerTokenSpotify(){
 
-
     //1. PREPARO (PA ONDE VOY?, A HACER QUE?, CON QUE DATOS?)
     const URL_TOKEN_SERVICE="https://accounts.spotify.com/api/token"
     const METODO_HTTP="POST"
@@ -22,8 +21,8 @@ export async function obtenerTokenSpotify(){
 
     //3. ENTREGAR EL RESULTADO AL COMPONENTE PARA QUE SE LO PINTE
     //AL USUARIO
-    console.log(tokenrespuesta)
-    return tokenrespuesta
+    return `${tokenrespuesta.token_type} ${tokenrespuesta.access_token}` 
+    
 
 
 }
